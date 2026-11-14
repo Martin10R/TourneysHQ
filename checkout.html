@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TourneysHQ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">TourneysHQ</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#how-it-works">How it works</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="my_tournaments.html">My Tournaments</a></li>
+            </ul>
+        </nav>
+        <a href="create.html" class="btn btn-primary">Create a tournament</a>
+    </header>
+
+    <main>
+
+        <section class="page-header">
+            <div class="section-heading">
+                <p class="eyebrow">Checkout</p>
+                <h1>Complete your upgrade</h1>
+                <p class="demo-notice">Demo only: no real payment is taken. Please do not enter real card details.</p>
+            </div>
+        </section>
+
+        <section class="checkout-layout">
+
+            <aside class="order-summary">
+                <h2>Order summary</h2>
+                <p class="summary-plan" id="summary-plan">Club plan</p>
+
+                <div class="form-group">
+                    <label for="billing-select">Billing</label>
+                    <select id="billing-select">
+                        <option value="monthly">Monthly</option>
+                        <option value="annual">Annual (save 20%)</option>
+                    </select>
+                </div>
+
+                <p class="summary-price">
+                    <span class="currency">₦</span>
+                    <span id="summary-price">7,000</span>
+                    <span class="period">/month</span>
+                </p>
+                <a href="index.html#pricing" class="back-link">Change plan</a>
+            </aside>
+
+            <form class="checkout-form" id="checkout-form">
+                <h2>Payment details</h2>
+
+                <div class="form-group">
+                    <label for="full-name">Full name</label>
+                    <input type="text" id="full-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="card-number">Card number</label>
+                    <input type="text" id="card-number" inputmode="numeric" maxlength="19" placeholder="Demo only"
+                        required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="card-expiry">Expiry</label>
+                        <input type="text" id="card-expiry" placeholder="MM/YY" maxlength="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-cvc">CVC</label>
+                        <input type="text" id="card-cvc" inputmode="numeric" maxlength="4" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Pay now (demo)</button>
+            </form>
+
+        </section>
+
+        <section class="checkout-success" id="checkout-success" hidden>
+            <h2>Payment successful</h2>
+            <p>Your plan is now active on this device.</p>
+            <a href="create.html" class="btn btn-primary">Create a tournament</a>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 TourneysHQ. All rights reserved.</p>
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="my_tournaments.html">My Tournaments</a>
+            <a href="create.html">Create</a>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

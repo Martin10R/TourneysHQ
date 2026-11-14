@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TourneysHQ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">TourneysHQ</a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#how-it-works">How it works</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="my_tournaments.html">My Tournaments</a></li>
+      </ul>
+    </nav>
+    <a href="create.html" class="btn btn-primary">Create a tournament</a>
+  </header>
+
+  <main>
+
+    <section class="page-header">
+      <div class="section-heading">
+        <p class="eyebrow">Your dashboard</p>
+        <h1>My Tournaments</h1>
+        <p>Tournaments saved on this device appear here.</p>
+      </div>
+      <a href="create.html" class="btn btn-primary">+ New tournament</a>
+    </section>
+
+    <section class="tournament-list-section">
+      <div class="tournament-grid" id="tournament-list">
+        <!-- Sample card for styling. JavaScript will replace it with real saved tournaments. -->
+        <article class="tournament-card">
+          <p class="card-tag">Round-robin</p>
+          <h3>Sample Cup</h3>
+          <p class="card-meta">8 teams &middot; Football</p>
+          <a href="tournament.html" class="btn btn-outline">Open</a>
+        </article>
+      </div>
+
+      <div class="empty-state" id="empty-state">
+        <h2>No tournaments yet</h2>
+        <p>Create your first tournament and it will show up here.</p>
+        <a href="create.html" class="btn btn-primary">Create a tournament</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 TourneysHQ. All rights reserved.</p>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="my_tournaments.html">My Tournaments</a>
+      <a href="create.html">Create</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

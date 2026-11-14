@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Tournament | TourneysHQ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">TourneysHQ</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#how-it-works">How it works</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="my_tournaments.html">My Tournaments</a></li>
+            </ul>
+        </nav>
+        <a href="create.html" class="btn btn-primary">Create a tournament</a>
+    </header>
+
+    <main>
+
+        <section class="page-header">
+            <div class="section-heading">
+                <p class="eyebrow">New tournament</p>
+                <h1>Create a tournament</h1>
+                <p>Fill in the details, add your teams, and we'll build the fixtures.</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <form class="create-form" id="create-form">
+
+                <div class="form-group">
+                    <label for="tournament-name">Tournament name</label>
+                    <input type="text" id="tournament-name" name="tournament-name" placeholder="e.g. Community Cup"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sport">Sport or game</label>
+                    <select id="sport" name="sport">
+                        <option value="football">Football</option>
+                        <option value="basketball">Basketball</option>
+                        <option value="volleyball">Volleyball</option>
+                        <option value="esports">Esports</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <fieldset class="form-group format-options">
+                    <legend>Format</legend>
+
+                    <label class="format-option">
+                        <input type="radio" name="format" value="round-robin" checked>
+                        <span class="format-title">Round-robin</span>
+                        <span class="format-desc">Everyone plays everyone. Best for leagues.</span>
+                    </label>
+
+                    <label class="format-option">
+                        <input type="radio" name="format" value="knockout">
+                        <span class="format-title">Knockout</span>
+                        <span class="format-desc">Lose once and you're out.</span>
+                    </label>
+
+                    <label class="format-option">
+                        <input type="radio" name="format" value="groups">
+                        <span class="format-title">Groups + knockout</span>
+                        <span class="format-desc">Group stage first, then the best teams go through.</span>
+                    </label>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="tiebreak">Tie-break rule</label>
+                    <select id="tiebreak" name="tiebreak">
+                        <option value="gd">Goal difference (default)</option>
+                        <option value="gf">Goals scored (League)</option>
+                        <option value="wins">Most wins (League)</option>
+                    </select>
+                    <p class="form-hint">Used to rank teams on equal points. Changing this is a League plan feature.</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="team-input">Teams</label>
+                    <div class="team-input-row">
+                        <input type="text" id="team-input" placeholder="Type a team name">
+                        <button type="button" class="btn btn-outline" id="add-team-btn">Add team</button>
+                    </div>
+                    <p class="form-hint"><span id="team-count">0</span> teams added. The Free plan allows up to 8.</p>
+                    <ul class="team-list" id="team-list"></ul>
+                </div>
+
+                <p class="form-error" id="form-error"></p>
+
+                <button type="submit" class="btn btn-primary">Generate tournament</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 TourneysHQ. All rights reserved.</p>
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="my_tournaments.html">My Tournaments</a>
+            <a href="create.html">Create</a>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

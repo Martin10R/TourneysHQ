@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament | TourneysHQ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">TourneysHQ</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#how-it-works">How it works</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="my_tournaments.html">My Tournaments</a></li>
+            </ul>
+        </nav>
+        <a href="create.html" class="btn btn-primary">Create a tournament</a>
+    </header>
+
+    <main>
+
+        <section class="tournament-header">
+            <a href="my_tournaments.html" class="back-link">&larr; My Tournaments</a>
+            <div class="section-heading">
+                <p class="eyebrow" id="tournament-format">Round-robin</p>
+                <h1 id="tournament-title">Tournament name</h1>
+                <p id="tournament-meta">0 teams</p>
+            </div>
+            <div class="tournament-actions">
+                <button type="button" class="btn btn-outline" id="print-btn">Print</button>
+                <button type="button" class="btn btn-outline" id="share-btn">Share graphic</button>
+            </div>
+        </section>
+
+        <section class="tournament-body">
+
+            <div class="tabs">
+                <button type="button" class="tab-btn active" data-tab="fixtures">Fixtures</button>
+                <button type="button" class="tab-btn" data-tab="bracket">Bracket</button>
+                <button type="button" class="tab-btn" data-tab="standings">Standings</button>
+                <button type="button" class="tab-btn" data-tab="scorers">Top scorers</button>
+            </div>
+
+            <div class="tab-panel active" id="tab-fixtures">
+                <div id="fixtures-container"></div>
+            </div>
+
+            <div class="tab-panel" id="tab-bracket">
+                <div class="bracket" id="bracket-container"></div>
+            </div>
+
+            <div class="tab-panel" id="tab-standings"></div>
+
+            <div class="tab-panel" id="tab-scorers">
+                <form class="scorer-form" id="scorer-form">
+                    <input type="text" id="scorer-name" placeholder="Player name" maxlength="40"
+                        aria-label="Player name">
+                    <select id="scorer-team" aria-label="Player team"></select>
+                    <input type="number" id="scorer-goals" value="1" min="1" max="20" aria-label="Goals">
+                    <button type="submit" class="btn btn-outline btn-small">Add goal</button>
+                </form>
+                <div class="table-wrapper">
+                    <table class="scorers-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Player</th>
+                                <th>Team</th>
+                                <th>Goals</th>
+                            </tr>
+                        </thead>
+                        <tbody id="scorers-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 TourneysHQ. All rights reserved.</p>
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="my_tournaments.html">My Tournaments</a>
+            <a href="create.html">Create</a>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
